@@ -1,6 +1,7 @@
 ---
 title: 'New Author, introducing: Sean'
 author: hbanken
+draft: true
 type: post
 date: 2011-05-24T17:31:25+00:00
 url: /2011/05/24/new-author/

@@ -1,7 +1,3 @@
 [build]
 publish = "public"
-command = "hugo --gc --minify"
-
-[context.production.environment]
-HUGO_ENV = "production"
-HUGO_ENABLEGITINFO = "true"
+command = "HUGO_ENABLEGITINFO=true HUGO_BASEURL=$URL/ hugo --gc --minify"

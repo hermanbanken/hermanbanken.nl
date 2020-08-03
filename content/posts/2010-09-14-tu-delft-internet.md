@@ -12,5 +12,5 @@ categories:
 De TU is de snelste ISP van Nederland, kijk maar:  
 [![][1]][2]
 
- [1]: http://www.speedtest.net/result/952588665.png
- [2]: http://www.speedtest.net
+ [1]: https://www.speedtest.net/result/952588665.png
+ [2]: https://www.speedtest.net

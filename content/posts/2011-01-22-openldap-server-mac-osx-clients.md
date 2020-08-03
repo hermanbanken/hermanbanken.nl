@@ -29,7 +29,7 @@ tags:
     <!--more-->
   </p><figure id="attachment_205" style="width: 400px" class="wp-caption aligncenter">
   
-  <a href="https://hermanbanken.nl/wp-content/uploads/2011/01/Schermafbeelding-2011-01-22-om-04.17.20.png"><img class="size-full wp-image-205 " title="LDAP server Mac Windows Linux clients" src="https://hermanbanken.nl/wp-content/uploads/2011/01/Schermafbeelding-2011-01-22-om-04.17.20.png" alt="LDAP server with Mac, Windows & Linux clients" width="400" height="260" srcset="https://hermanbanken.nl/wp-content/uploads/2011/01/Schermafbeelding-2011-01-22-om-04.17.20.png 666w, https://hermanbanken.nl/wp-content/uploads/2011/01/Schermafbeelding-2011-01-22-om-04.17.20-300x195.png 300w" sizes="(max-width: 400px) 100vw, 400px" /></a><figcaption class="wp-caption-text">LDAP server with Mac, Windows and Linux clients</figcaption></figure> 
+  <a href="/images/2011/01/Schermafbeelding-2011-01-22-om-04.17.20.png"><img class="size-full wp-image-205 " title="LDAP server Mac Windows Linux clients" src="/images/2011/01/Schermafbeelding-2011-01-22-om-04.17.20.png" alt="LDAP server with Mac, Windows & Linux clients" width="400" height="260" srcset="/images/2011/01/Schermafbeelding-2011-01-22-om-04.17.20.png 666w, /images/2011/01/Schermafbeelding-2011-01-22-om-04.17.20-300x195.png 300w" sizes="(max-width: 400px) 100vw, 400px" /></a><figcaption class="wp-caption-text">LDAP server with Mac, Windows and Linux clients</figcaption></figure> 
   
   <p>
     For people who have never heard of LDAP, Active Directory or Open Directory: you should probably just keep it that way. But if you’re very interested or just want to spend a lot of time frustrating yourself, please read on.
@@ -44,7 +44,7 @@ tags:
   </h1>
   
   <p>
-    <img class="alignright" title="Kernel Panic" src="http://1to10reviews.files.wordpress.com/2007/07/kernel_panic-1p0f.png" alt="Kernel Panic" width="340" height="184" />Since I try to centralize the data and information services in our home I setup a Mac OS X Server about a year ago. All computers in our home could login to this server to get the user home directories and shared data like photo’s, movies and our iTunes library. This way allowing my family to use whatever computer they needed (speed, word-processing), being able to switch computers and not having to buy fast computers only. But after a while, there was one computer short, so I let them login to the server as well. Making that machine a <strong>client and a server at the same time</strong>. That was a <strong>bad choice</strong>! Since I’m kind of a Hackintosh-guy the server was a Hackintosh running Snow Leopard Server. And although Mac OS X is a very stable operating system, sometimes things get screwed up. I think the problem was the unmounting of local NFS drives when logging out of the server, but I’m not sure on that one. Anyway, the server hangs sometimes with a “You need to restart your computer”-kernel-error-message and this being also the server meant all clients losing there connection to the home directories hanging all clients too. The situation had to be changed.
+    <img class="alignright" title="Kernel Panic" src="https://1to10reviews.files.wordpress.com/2007/07/kernel_panic-1p0f.png" alt="Kernel Panic" width="340" height="184" />Since I try to centralize the data and information services in our home I setup a Mac OS X Server about a year ago. All computers in our home could login to this server to get the user home directories and shared data like photo’s, movies and our iTunes library. This way allowing my family to use whatever computer they needed (speed, word-processing), being able to switch computers and not having to buy fast computers only. But after a while, there was one computer short, so I let them login to the server as well. Making that machine a <strong>client and a server at the same time</strong>. That was a <strong>bad choice</strong>! Since I’m kind of a Hackintosh-guy the server was a Hackintosh running Snow Leopard Server. And although Mac OS X is a very stable operating system, sometimes things get screwed up. I think the problem was the unmounting of local NFS drives when logging out of the server, but I’m not sure on that one. Anyway, the server hangs sometimes with a “You need to restart your computer”-kernel-error-message and this being also the server meant all clients losing there connection to the home directories hanging all clients too. The situation had to be changed.
   </p>
   
   <h1>
@@ -178,7 +178,7 @@ olcRootPW: $passwd</pre>
 |     | - &lt;&lt;and a lot more&gt;&gt;</pre>
   
   <p>
-    All users are stored in com>example>users and groups are stored in com>example>groups. Apple needs a separate tree to store specific information and especially the config section in macosx is interesting.<br /> <a href="https://hermanbanken.nl/wp-content/uploads/2011/01/Schermafbeelding-2011-01-22-om-04.12.41.png"><img class="aligncenter size-full wp-image-200" title="Populating LDAP, directory tree" src="https://hermanbanken.nl/wp-content/uploads/2011/01/Schermafbeelding-2011-01-22-om-04.12.41.png" alt="Directory tree" height="400" srcset="https://hermanbanken.nl/wp-content/uploads/2011/01/Schermafbeelding-2011-01-22-om-04.12.41.png 265w, https://hermanbanken.nl/wp-content/uploads/2011/01/Schermafbeelding-2011-01-22-om-04.12.41-137x300.png 137w" sizes="(max-width: 265px) 100vw, 265px" /></a>
+    All users are stored in com>example>users and groups are stored in com>example>groups. Apple needs a separate tree to store specific information and especially the config section in macosx is interesting.<br /> <a href="/images/2011/01/Schermafbeelding-2011-01-22-om-04.12.41.png"><img class="aligncenter size-full wp-image-200" title="Populating LDAP, directory tree" src="/images/2011/01/Schermafbeelding-2011-01-22-om-04.12.41.png" alt="Directory tree" height="400" srcset="/images/2011/01/Schermafbeelding-2011-01-22-om-04.12.41.png 265w, /images/2011/01/Schermafbeelding-2011-01-22-om-04.12.41-137x300.png 137w" sizes="(max-width: 265px) 100vw, 265px" /></a>
   </p>
   
   <h1>
@@ -190,11 +190,11 @@ olcRootPW: $passwd</pre>
   </p>
   
   <p>
-    <a href="https://hermanbanken.nl/wp-content/uploads/2011/01/Schermafbeelding-2011-01-22-om-04.05.26.png"><img class="aligncenter size-medium wp-image-197" title="Adding LDAP server in Directory Utility" src="https://hermanbanken.nl/wp-content/uploads/2011/01/Schermafbeelding-2011-01-22-om-04.05.26.png" alt="Adding LDAP server in Directory Utility: select Fetch from server" srcset="https://hermanbanken.nl/wp-content/uploads/2011/01/Schermafbeelding-2011-01-22-om-04.05.26.png 643w, https://hermanbanken.nl/wp-content/uploads/2011/01/Schermafbeelding-2011-01-22-om-04.05.26-300x206.png 300w" sizes="(max-width: 643px) 100vw, 643px" /></a>
+    <a href="/images/2011/01/Schermafbeelding-2011-01-22-om-04.05.26.png"><img class="aligncenter size-medium wp-image-197" title="Adding LDAP server in Directory Utility" src="/images/2011/01/Schermafbeelding-2011-01-22-om-04.05.26.png" alt="Adding LDAP server in Directory Utility: select Fetch from server" srcset="/images/2011/01/Schermafbeelding-2011-01-22-om-04.05.26.png 643w, /images/2011/01/Schermafbeelding-2011-01-22-om-04.05.26-300x206.png 300w" sizes="(max-width: 643px) 100vw, 643px" /></a>
   </p>
   
   <p>
-    <a href="https://hermanbanken.nl/wp-content/uploads/2011/01/Schermafbeelding-2011-01-22-om-04.05.42.png"><img class="aligncenter size-full wp-image-198" title="Set search base" src="https://hermanbanken.nl/wp-content/uploads/2011/01/Schermafbeelding-2011-01-22-om-04.05.42.png" alt="Set search base to ou=macosxodconfig,cn=config,ou=macosx,dc=example,dc=com" width="669" height="270" srcset="https://hermanbanken.nl/wp-content/uploads/2011/01/Schermafbeelding-2011-01-22-om-04.05.42.png 669w, https://hermanbanken.nl/wp-content/uploads/2011/01/Schermafbeelding-2011-01-22-om-04.05.42-300x121.png 300w" sizes="(max-width: 669px) 100vw, 669px" /></a>
+    <a href="/images/2011/01/Schermafbeelding-2011-01-22-om-04.05.42.png"><img class="aligncenter size-full wp-image-198" title="Set search base" src="/images/2011/01/Schermafbeelding-2011-01-22-om-04.05.42.png" alt="Set search base to ou=macosxodconfig,cn=config,ou=macosx,dc=example,dc=com" width="669" height="270" srcset="/images/2011/01/Schermafbeelding-2011-01-22-om-04.05.42.png 669w, /images/2011/01/Schermafbeelding-2011-01-22-om-04.05.42-300x121.png 300w" sizes="(max-width: 669px) 100vw, 669px" /></a>
   </p>
   
   <p>
@@ -242,7 +242,7 @@ olcRootPW: $passwd</pre>
   </h1>
   
   <p>
-    The <a title="LDAP installatie scripts" href="https://hermanbanken.nl/wp-content/uploads/2012/04/OpenLDAP.zip" target="_blank"><span style="color: #008000;">scripts can be downloaded here</span></a>. The zip contains 8 files and 1 folder:
+    The <a title="LDAP installatie scripts" href="/images/2012/04/OpenLDAP.zip" target="_blank"><span style="color: #008000;">scripts can be downloaded here</span></a>. The zip contains 8 files and 1 folder:
   </p>
   
   <pre>install.bash

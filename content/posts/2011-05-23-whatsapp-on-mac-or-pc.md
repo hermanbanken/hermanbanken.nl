@@ -14,7 +14,7 @@ categories:
 
 WhatsApp is a fairly new App for multiple mobile devices. Due to the App Store, Android Market, etc. it grew huge in just a few months. Especially since people started to use them as a replacement for SMS chats and because your identity is based on your mobile number.
 
-<img class="alignright size-full wp-image-316" title="Screenshot WhatApp for Mac" alt="" src="https://hermanbanken.nl/wp-content/uploads/2011/05/Schermafbeelding-2011-05-23-om-17.10.03.png" height="400" srcset="https://hermanbanken.nl/wp-content/uploads/2011/05/Schermafbeelding-2011-05-23-om-17.10.03.png 454w, https://hermanbanken.nl/wp-content/uploads/2011/05/Schermafbeelding-2011-05-23-om-17.10.03-218x300.png 218w" sizes="(max-width: 454px) 100vw, 454px" /> 
+<img class="alignright size-full wp-image-316" title="Screenshot WhatApp for Mac" alt="" src="/images/2011/05/Schermafbeelding-2011-05-23-om-17.10.03.png" height="400" srcset="/images/2011/05/Schermafbeelding-2011-05-23-om-17.10.03.png 454w, /images/2011/05/Schermafbeelding-2011-05-23-om-17.10.03-218x300.png 218w" sizes="(max-width: 454px) 100vw, 454px" /> 
 
 I think WhatsApp as a service has one disadvantage: it only works on mobile devices. Although it might be the reason it so popular. At the moment it&#8217;s a replacement for SMS and services that offer equal features like Google Talk work on multiple devices. So the service is not thought of as some kind of replacement for SMS. The nice thing is that every one who has WhatsApp has a smartphone and therefore can also download Google Talk apps should WhatsApp become less popular.
 

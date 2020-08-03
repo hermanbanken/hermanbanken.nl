@@ -16,7 +16,7 @@ The project I&#8217;m working on includes fitting some points to a predefined sh
 val center = vs.reduce(_ + _) / vs.size</pre>
 
 Using this center I plotted a blue &#8216;perfect&#8217; track and my input points in green. The result:  
-[<img class="aligncenter wp-image-529 size-large" src="https://hermanbanken.nl/wp-content/uploads/2016/04/gpx-center-wrong-1024x905.png" alt="GPX points wrongly centered" width="660" height="583" srcset="https://hermanbanken.nl/wp-content/uploads/2016/04/gpx-center-wrong-1024x905.png 1024w, https://hermanbanken.nl/wp-content/uploads/2016/04/gpx-center-wrong-300x265.png 300w" sizes="(max-width: 660px) 100vw, 660px" />][1]
+[<img class="aligncenter wp-image-529 size-large" src="/images/2016/04/gpx-center-wrong-1024x905.png" alt="GPX points wrongly centered" width="660" height="583" srcset="/images/2016/04/gpx-center-wrong-1024x905.png 1024w, /images/2016/04/gpx-center-wrong-300x265.png 300w" sizes="(max-width: 660px) 100vw, 660px" />][1]
 
 As you can see there is some offset between the green and the blue tracks. The orientation is different too, but first I wanted to fix the positioning problem. After many hours of thinkering and continuing with other issues, I came across another issue with my Floats: the formatting back to GPS longitude and latitudes. For some reason I wrongly typed the formatting string, but due to this issue my attention shifted to floating point precision and it&#8217;s quirks. Then I wrote this little test:
 
@@ -41,9 +41,9 @@ Diff = (41.5, 0.21875, -58.5)</pre>
 
 Tada! Issue found. Adding all those large numbers (vectors relative to the earths center) caused the precision of the resulting float to be too little to accomodate for the large numbers plus their precision. Using doubles to store the accumulating numbers results in a better center, which produces the following image:
 
-[<img class="aligncenter wp-image-528 size-large" src="https://hermanbanken.nl/wp-content/uploads/2016/04/gpx-center-good-1024x908.png" alt="GPX points correctly centered" width="660" height="585" srcset="https://hermanbanken.nl/wp-content/uploads/2016/04/gpx-center-good-1024x908.png 1024w, https://hermanbanken.nl/wp-content/uploads/2016/04/gpx-center-good-300x266.png 300w" sizes="(max-width: 660px) 100vw, 660px" />][2]
+[<img class="aligncenter wp-image-528 size-large" src="/images/2016/04/gpx-center-good-1024x908.png" alt="GPX points correctly centered" width="660" height="585" srcset="/images/2016/04/gpx-center-good-1024x908.png 1024w, /images/2016/04/gpx-center-good-300x266.png 300w" sizes="(max-width: 660px) 100vw, 660px" />][2]
 
 Much better! So remember, floats are not always good enough.
 
- [1]: https://hermanbanken.nl/wp-content/uploads/2016/04/gpx-center-wrong.png
- [2]: https://hermanbanken.nl/wp-content/uploads/2016/04/gpx-center-good.png
+ [1]: /images/2016/04/gpx-center-wrong.png
+ [2]: /images/2016/04/gpx-center-good.png

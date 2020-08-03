@@ -14,7 +14,7 @@ tags:
 
 ---
 <p style="text-align: center;">
-  <img class="aligncenter" style="width: 100%;" src="https://hermanbanken.nl/wp-content/uploads/2009/01/snowleopardrevisited_normal.jpg" alt="" />
+  <img class="aligncenter" style="width: 100%;" src="/images/2009/01/snowleopardrevisited_normal.jpg" alt="" />
 </p>
 
 <p style="text-align: left;">

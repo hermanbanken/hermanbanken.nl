@@ -10,7 +10,7 @@ categories:
   - OSX
 
 ---
-<img class="alignright size-thumbnail wp-image-306" src="https://hermanbanken.nl/wp-content/uploads/2011/03/science_apple_tree_groot-150x150.png" style="float:right" alt="" width="150" height="150" srcset="https://hermanbanken.nl/wp-content/uploads/2011/03/science_apple_tree_groot-150x150.png 150w, https://hermanbanken.nl/wp-content/uploads/2011/03/science_apple_tree_groot.png 222w" sizes="(max-width: 150px) 100vw, 150px" />When Apple introduced the Mac Mini server version nobody knew. When Apple discontinued the XServe people started thinking. When the changes for OS X Lion became public and OS X Server was merged into the client-version, everybody should have known. When the [rumors came that Apple will stop using Samba][1] and implement their own SMB2 server/client, I knew: Apple wants to give the world an alternative to Windows Home Server (WHS).
+<img class="alignright size-thumbnail wp-image-306" src="/images/2011/03/science_apple_tree_groot-150x150.png" style="float:right" alt="" width="150" height="150" srcset="/images/2011/03/science_apple_tree_groot-150x150.png 150w, /images/2011/03/science_apple_tree_groot.png 222w" sizes="(max-width: 150px) 100vw, 150px" />When Apple introduced the Mac Mini server version nobody knew. When Apple discontinued the XServe people started thinking. When the changes for OS X Lion became public and OS X Server was merged into the client-version, everybody should have known. When the [rumors came that Apple will stop using Samba][1] and implement their own SMB2 server/client, I knew: Apple wants to give the world an alternative to Windows Home Server (WHS).
 
 **Whats in for me?**<!--more-->
 

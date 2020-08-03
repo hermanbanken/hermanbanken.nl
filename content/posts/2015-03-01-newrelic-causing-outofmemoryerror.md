@@ -42,7 +42,7 @@ Eclipse Memory Analyser is a free tool that is very easy to use. It starts impor
   <figure class='gallery-item'> 
   
   <div class='gallery-icon landscape'>
-    <a href='http://hermanbanken.nl/wp-content/uploads/2015/03/dump1.png'><img width="150" height="150" src="http://hermanbanken.nl/wp-content/uploads/2015/03/dump1-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" aria-describedby="gallery-2-493" /></a>
+    <a href='/images/2015/03/dump1.png'><img width="150" height="150" src="/images/2015/03/dump1-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" aria-describedby="gallery-2-493" /></a>
   </div><figcaption class='wp-caption-text gallery-caption' id='gallery-2-493'> Prime suspect: com.newrelic.agent.Transaction </figcaption></figure>
 </div>
 
@@ -62,17 +62,17 @@ After seeing this analysis I was baffled: how could this be? So I searched and f
   <figure class='gallery-item'> 
   
   <div class='gallery-icon portrait'>
-    <a href='http://hermanbanken.nl/wp-content/uploads/2015/03/Screen-Shot-2015-03-01-at-14.58.46.png'><img width="150" height="150" src="http://hermanbanken.nl/wp-content/uploads/2015/03/Screen-Shot-2015-03-01-at-14.58.46-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" aria-describedby="gallery-3-491" /></a>
+    <a href='/images/2015/03/Screen-Shot-2015-03-01-at-14.58.46.png'><img width="150" height="150" src="/images/2015/03/Screen-Shot-2015-03-01-at-14.58.46-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" aria-describedby="gallery-3-491" /></a>
   </div><figcaption class='wp-caption-text gallery-caption' id='gallery-3-491'> Prime suspect: com.newrelic.agent.Transaction </figcaption></figure><figure class='gallery-item'> 
   
   <div class='gallery-icon landscape'>
-    <a href='http://hermanbanken.nl/wp-content/uploads/2015/03/Screen-Shot-2015-03-01-at-14.58.58.png'><img width="150" height="150" src="http://hermanbanken.nl/wp-content/uploads/2015/03/Screen-Shot-2015-03-01-at-14.58.58-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" aria-describedby="gallery-3-492" srcset="https://hermanbanken.nl/wp-content/uploads/2015/03/Screen-Shot-2015-03-01-at-14.58.58-150x150.png 150w, https://hermanbanken.nl/wp-content/uploads/2015/03/Screen-Shot-2015-03-01-at-14.58.58-300x300.png 300w, https://hermanbanken.nl/wp-content/uploads/2015/03/Screen-Shot-2015-03-01-at-14.58.58.png 850w" sizes="(max-width: 150px) 100vw, 150px" /></a>
+    <a href='/images/2015/03/Screen-Shot-2015-03-01-at-14.58.58.png'><img width="150" height="150" src="/images/2015/03/Screen-Shot-2015-03-01-at-14.58.58-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" aria-describedby="gallery-3-492" srcset="/images/2015/03/Screen-Shot-2015-03-01-at-14.58.58-150x150.png 150w, /images/2015/03/Screen-Shot-2015-03-01-at-14.58.58-300x300.png 300w, /images/2015/03/Screen-Shot-2015-03-01-at-14.58.58.png 850w" sizes="(max-width: 150px) 100vw, 150px" /></a>
   </div><figcaption class='wp-caption-text gallery-caption' id='gallery-3-492'> Detail </figcaption></figure>
 </div>
 
 Too bad that the update did not fix the issue. I hope that NewRelic can fix the issue in the future, as I really liked the assurance that you get mails when your server is down, but also being able to drill down into performance issues. By the way: besides the issue still being there, also the apps performance decreased when using the updated agent:<figure id="attachment_496" style="width: 499px" class="wp-caption aligncenter">
 
-[<img class="wp-image-496" src="https://hermanbanken.nl/wp-content/uploads/2015/03/Screen-Shot-2015-03-01-at-14.59.54.png" alt="Web request performance before and after updating from New Relic agent 3.10 to 3.14" width="499" height="229" srcset="https://hermanbanken.nl/wp-content/uploads/2015/03/Screen-Shot-2015-03-01-at-14.59.54.png 767w, https://hermanbanken.nl/wp-content/uploads/2015/03/Screen-Shot-2015-03-01-at-14.59.54-300x138.png 300w" sizes="(max-width: 499px) 100vw, 499px" />][6]<figcaption class="wp-caption-text">Performance decrease from going from New Relic agent 3.10 to 3.14</figcaption></figure> 
+[<img class="wp-image-496" src="/images/2015/03/Screen-Shot-2015-03-01-at-14.59.54.png" alt="Web request performance before and after updating from New Relic agent 3.10 to 3.14" width="499" height="229" srcset="/images/2015/03/Screen-Shot-2015-03-01-at-14.59.54.png 767w, /images/2015/03/Screen-Shot-2015-03-01-at-14.59.54-300x138.png 300w" sizes="(max-width: 499px) 100vw, 499px" />][6]<figcaption class="wp-caption-text">Performance decrease from going from New Relic agent 3.10 to 3.14</figcaption></figure> 
 
 &nbsp;
 
@@ -81,4 +81,4 @@ Too bad that the update did not fix the issue. I hope that NewRelic can fix the 
  [3]: https://projects.eclipse.org/projects/tools.mat/downloads "Eclipse Memory Analyzer"
  [4]: discuss.newrelic.com/t/outofmemory-error-because-of-new-relic/10340/6
  [5]: https://docs.newrelic.com/docs/release-notes/agent-release-notes/java-release-notes#Java-Agent-3.12.1 "NewRelic release notes"
- [6]: https://hermanbanken.nl/wp-content/uploads/2015/03/Screen-Shot-2015-03-01-at-14.59.54.png
+ [6]: /images/2015/03/Screen-Shot-2015-03-01-at-14.59.54.png

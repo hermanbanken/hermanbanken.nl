@@ -45,10 +45,10 @@ It will not always occur as I discovered doing it the 3rd time, but still: hope 
   <figure class='gallery-item'> 
   
   <div class='gallery-icon landscape'>
-    <a href='https://hermanbanken.nl/2013/05/05/html5-audio-trouble/screen-shot-2013-05-05-at-17-13-18/'><img width="150" height="150" src="http://hermanbanken.nl/wp-content/uploads/2013/05/Screen-Shot-2013-05-05-at-17.13.18-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+    <a href='/images/2013/05/Screen-Shot-2013-05-05-at-17.13.18.png'><img width="150" height="150" src="/images/2013/05/Screen-Shot-2013-05-05-at-17.13.18-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
   </div></figure><figure class='gallery-item'> 
   
   <div class='gallery-icon landscape'>
-    <a href='https://hermanbanken.nl/2013/05/05/html5-audio-trouble/screen-shot-2013-05-05-at-17-12-54/'><img width="150" height="150" src="http://hermanbanken.nl/wp-content/uploads/2013/05/Screen-Shot-2013-05-05-at-17.12.54-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+    <a href='/images/2013/05/Screen-Shot-2013-05-05-at-17.12.54.png'><img width="150" height="150" src="/images/2013/05/Screen-Shot-2013-05-05-at-17.12.54-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
   </div></figure>
 </div>

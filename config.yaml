@@ -1,3 +1,23 @@
 url: https://hermanbanken.nl/
 name: HermanBanken.nl
+title: Herman Banken
 description: Tech blog, from Delft, NL
+theme: hyde
+
+# Hyde
+params:
+  description: Personal blog  ![profile picture](https://avatars2.githubusercontent.com/u/791189?v=3&s=460)
+
+Menus:
+  main:
+    - Name: "Github"
+      URL: "https://github.com/hermanbanken/"
+    - Name: "Twitter"
+      URL: "https://twitter.com/hermanbanken/"
+    - Name: "LinkedIn"
+      URL: "https://www.linkedin.com/in/hermanbanken/"
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

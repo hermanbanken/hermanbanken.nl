@@ -14,6 +14,9 @@ tags:
   - shsh blobs
 
 ---
+
+Guest author: veeence
+
 [<img class="aligncenter size-full wp-image-361" title="iPad 2. Finally, Jailbroken." src="https://hermanbanken.nl/wp-content/uploads/2011/07/JailbreakMe-Purple-Screen1.jpg" alt="" width="620" height="233" srcset="https://hermanbanken.nl/wp-content/uploads/2011/07/JailbreakMe-Purple-Screen1.jpg 620w, https://hermanbanken.nl/wp-content/uploads/2011/07/JailbreakMe-Purple-Screen1-300x113.jpg 300w" sizes="(max-width: 620px) 100vw, 620px" />][1]Since there is a lot of confusion out there, and since I’m repeating myself all the time (which I do not really like), I made this little write up of questions that are continuously being asked (my personal FAQ). Please note that this is a global explanation. Don’t try to argue with me on specific details.  
 This FAQ has been written by [@veeence][2] and is being powered by [@hermanbanken][3].
 

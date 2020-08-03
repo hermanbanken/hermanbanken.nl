@@ -8,6 +8,9 @@ categories:
   - OpenLDAP
 
 ---
+
+Guest author: Sean
+
 ## Schemas
 
 So what are these schema files anyway?  What do they do and why do we need to add a new one to get authentication with Windoze?  Drop the &#8220;a&#8221; from the end and it will give you a hint.  They are schemes or models or layouts for what our LDAP directory and all of it&#8217;s objects will look like.  They describe every attribute of the directory from top to bottom and put governing rules on what is allowed in the directory.  They don&#8217;t contain any real directory data at all, they only describe what the objects will look like.

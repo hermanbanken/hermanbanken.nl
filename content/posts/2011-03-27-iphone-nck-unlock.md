@@ -8,6 +8,9 @@ categories:
   - iPhone
 
 ---
+
+Guest author: veeence
+
 UPDATE at [section 2][1].  
 UPDATE II at [section 2][2].
 

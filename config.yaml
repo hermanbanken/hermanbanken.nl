@@ -21,3 +21,8 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+
+# TODO
+# - /feed/ should be RSS!
+# - comments from Wordpress :thinking: (https://hermanbanken.nl/wp-admin/edit-comments.php)
+# - create archive for very old stuff

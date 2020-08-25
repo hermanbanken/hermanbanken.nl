@@ -1,0 +1,45 @@
+@startuml
+
+request as "HTTP Request"
+cloud "xDS API"
+
+cloud "some server" {
+	together {
+		() Foo1 as "foo-1"
+		() Foo2 as "foo-2"
+	}
+	together {
+		() Bar1 as "bar-1"
+		() Bar2 as "bar-2"
+	}
+	node "Envoy" {
+		request -right-> [Listener] : GET /foo
+		[runtime] -[hidden]-> [Listener]
+		
+		usecase FilterC as "Filter Chain
+		==
+		Header modification
+		--
+		Router
+		--
+		etc."
+
+		together {
+			[ClusterA]
+			[ClusterB]
+		}
+
+		[Listener] -right-> FilterC
+		FilterC -right-> [ClusterA] : GET /foo
+		FilterC .right.> [ClusterB] : GET /bar
+		[ClusterA] -[hidden]-> [ClusterB]
+		[runtime] -left-> [xDS API]
+  	[ClusterA] -right-> () Foo1
+  	[ClusterA] -right-> () Foo2
+  	[ClusterB] -right-> () Bar1
+  	[ClusterB] -right-> () Bar2
+		() Bar1 -[hidden]> () Bar2
+	}
+}
+
+@enduml

@@ -64,7 +64,10 @@ implement subsets. It boils down to two things:
 
 The following code snippet shows how to, using static YAML configuration:
 
-<script src="https://gist.github.com/hermanbanken/f756aae18299f8674a7f498f8dfcef5f.js?file=file-static-alternative-yaml"></script>
+<script src="https://gist.github.com/hermanbanken/f756aae18299f8674a7f498f8dfcef5f.js?file=static-alternative.yaml"></script>
+<noscript>
+[https://gist.github.com/hermanbanken/f756aae18299f8674a7f498f8dfcef5f](https://gist.github.com/hermanbanken/f756aae18299f8674a7f498f8dfcef5f#file-static-alternative-yaml)
+</noscript>
 
 It was interesting figuring out how to convert this into xDS code. First of,
 there are several xDS endpoints that you can implement. If you just need a

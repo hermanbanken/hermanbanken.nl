@@ -49,6 +49,24 @@ property.
 
 ![Envoy architecture diagram with v1 and v2 subsets](/images/2020/envoy-subset.png)
 
+[The documentation about subsets](https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/upstream/load_balancing/subsets)
+is sparse. It does not show how to implement such a thing in xDS. I found it
+less than trivial, so I hope that this post might help you if you want to
+implement subsets. It boils down to two things:
+
+- determining request metadata; the easiest way to do this is with a HTTP Filter called Headers-To-Metadata, but you can also use a WebAssembly filter or something more sophisticated via a call-out to a gRPC service.
+- setting the cluster LoadAssigment settings
+
+This example shows how to 
+
+<script src="https://gist.github.com/hermanbanken/f756aae18299f8674a7f498f8dfcef5f.js?file=xds-resource.go#L51-L59"></script>
+
+<!-- <script src="https://gist.github.com/4505639.js?file=macroBuild.scala" type="text/javascript"></script> -->
+
+More about:
+- the Golang snippet for Http-Headers-to-Metadata
+- the Golang snippet with Meta subsets
+
 ## Conclusion
 Istio is a bridge too far for us now, due to the added complexity, but we still
 can use a part of it by using the underlying technology of Envoy. It allows us

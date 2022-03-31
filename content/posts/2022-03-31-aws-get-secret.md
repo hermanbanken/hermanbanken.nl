@@ -12,7 +12,7 @@ categories:
 ---
 
 Coming from a Google (GCP) ecosystem, there are many things that AWS does not do, that you'll miss. One of these things
-if automatically [mounting secrets from Secret Manager](https://cloud.google.com/run/docs/configuring/secrets) on your
+is automatically [mounting secrets from Secret Manager](https://cloud.google.com/run/docs/configuring/secrets) on your
 serverless Cloud Run instances like so:
 
 ```bash

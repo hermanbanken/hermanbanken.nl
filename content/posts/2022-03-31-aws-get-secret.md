@@ -2,7 +2,7 @@
 title: aws-get-secret
 author: hbanken
 type: post
-date: 2022-03-31T23:33:00+00:00
+date: 2022-03-31T23:33:00+02:00
 url: /2022/03/31/aws-get-secret/
 categories:
   - cloudnative

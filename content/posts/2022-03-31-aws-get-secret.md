@@ -19,9 +19,14 @@ serverless Cloud Run instances like so:
 gcloud run deploy SERVICE --update-secrets=PATH=SECRET_NAME:VERSION
 ```
 
-Unfortunately, this is not possible with AWS Lambda, although it would not be a big of a leap for AWS to add this
-feature somewhere soon. Instead, the typical way to retrieve to retrieve a secret with AWS Lambda today would be to
-retrieve it at [runtime](https://dev.to/aws-builders/how-to-use-secrete-manager-in-aws-lambda-node-js-3j80):
+This is extremely convenient, as the application itself does not need to be aware of the complexities of retrieving the
+secret. This is a form of separation of concerns, and has the advantage that locally you can just use `.env.local`
+while remote it automatically uses Secret Manager. Combined with connection strings to in-memory databases this becomes
+an ideal development experience, that is easily debuggable and easy to understand.
+
+Unfortunately, this secret integration is not offered by AWS Lambda, although it would not be a big of a leap for AWS to
+add this feature somewhere soon. Instead, the typical way to retrieve to retrieve a secret with AWS Lambda today would
+be to retrieve it at [runtime](https://dev.to/aws-builders/how-to-use-secrete-manager-in-aws-lambda-node-js-3j80):
 
 ```typescript
 async function getSecret(secretName, region){

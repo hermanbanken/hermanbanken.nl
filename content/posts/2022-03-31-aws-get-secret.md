@@ -67,7 +67,8 @@ variable. If your Lambda sets this value to `AWS_LAMBDA_EXEC_WRAPPER=/opt/aws-ge
 execution of the Lambda with `aws-get-secret` and the real handler has the real secret values available in its
 environment.
 
-The layer is also published as NodeJS package, allowing you to integrate it with CDK and/or serverless-stack:
+The layer is also published as NodeJS package, allowing you to integrate it with CDK and/or serverless-stack with
+just a few lines of infrastructure code:
 
 ```typescript
 import { wrapLambdasWithSecrets } from "aws-get-secret-lambda"

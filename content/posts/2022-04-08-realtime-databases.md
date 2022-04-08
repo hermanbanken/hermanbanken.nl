@@ -1,12 +1,11 @@
 ---
-title: Realtime SQL databases: Noria, Materialize and ReadySet
+title: "Realtime SQL databases: Noria, Materialize and ReadySet"
 author: hbanken
 type: post
 date: 2022-04-08T11:00:00+02:00
 url: /2022/04/08/realtime-databases/
 categories:
   - databases
-
 ---
 
 Sometimes the simplest of ideas are the most powerful. Almost all developers use databases now and then,

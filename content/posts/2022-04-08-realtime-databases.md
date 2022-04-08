@@ -39,4 +39,4 @@ complex internals of standard SQL databases, it flips them around to a dataflow 
 Materialize does something similar to [CQRS](https://microservices.io/patterns/data/cqrs.html) views, as it acts on
 a pubsub source of change data and maintains views in-memory. While Noria is eventually consistent, Materialize is serializable.
 
-Both are very interesting projects that I would love to try out soon.
+All three are very interesting projects I would love to try out soon.

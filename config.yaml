@@ -3,6 +3,7 @@ name: HermanBanken.nl
 title: Herman Banken
 description: Tech blog, from Delft, NL
 theme: hyde
+paginate: 4
 
 # Hyde
 params:

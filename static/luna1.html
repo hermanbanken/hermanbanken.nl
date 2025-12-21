@@ -184,30 +184,75 @@
         font-size: 0.9rem;
         color: #718096;
       }
+
       .snow {
         position: fixed;
         inset: 0;
         pointer-events: none;
+        z-index: 0;
+        overflow: hidden;
+      }
+
+      /* Snow layer 1 */
+      .snow::before,
+      .snow::after {
+        content: "";
+        position: absolute;
+        inset: -200% 0 0 0;
+        background-repeat: repeat;
+        animation: snow-fall linear infinite;
+      }
+
+      /* Big / slow flakes */
+      .snow::before {
         background-image: radial-gradient(
             2px 2px at 20% 30%,
-            white 50%,
+            rgba(255, 255, 255, 0.8) 50%,
             transparent 51%
           ),
-          radial-gradient(2px 2px at 80% 10%, white 50%, transparent 51%),
-          radial-gradient(1.5px 1.5px at 50% 50%, white 50%, transparent 51%),
-          radial-gradient(1px 1px at 30% 80%, white 50%, transparent 51%);
-        background-size: 200px 200px;
-        animation: snow-fall 18s linear infinite;
-        opacity: 0.35;
-        z-index: -1;
+          radial-gradient(
+            2px 2px at 70% 80%,
+            rgba(255, 255, 255, 0.8) 50%,
+            transparent 51%
+          ),
+          radial-gradient(
+            1.5px 1.5px at 40% 60%,
+            rgba(255, 255, 255, 0.8) 50%,
+            transparent 51%
+          );
+        background-size: 180px 180px;
+        animation-duration: 30s;
+        opacity: 0.4;
+      }
+
+      /* Small / faster flakes */
+      .snow::after {
+        background-image: radial-gradient(
+            1px 1px at 10% 20%,
+            rgba(255, 255, 255, 0.9) 50%,
+            transparent 51%
+          ),
+          radial-gradient(
+            1px 1px at 50% 40%,
+            rgba(255, 255, 255, 0.9) 50%,
+            transparent 51%
+          ),
+          radial-gradient(
+            1px 1px at 90% 70%,
+            rgba(255, 255, 255, 0.9) 50%,
+            transparent 51%
+          );
+        background-size: 120px 120px;
+        animation-duration: 18s;
+        opacity: 0.5;
       }
 
       @keyframes snow-fall {
         from {
-          background-position: 0 -200px;
+          transform: translateY(0);
         }
         to {
-          background-position: 0 600px;
+          transform: translateY(50%);
         }
       }
     </style>
@@ -275,9 +320,8 @@
             Kleding van 100% merinowol. Ze heeft nu maat 74, dus 80-86 is prima.
           </li>
           <ul>
-            <li>Broekjes</li>
-            <li>Truien</li>
-            <li>Sokken</li>
+            <li>Broekjes & leggings</li>
+            <li>Truien & shirtjes</li>
           </ul>
           <li>
             Creatieve verbruiksartikelen:

@@ -1,1 +1,301 @@
-helemaal niets!
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luna's Winter Wonderland</title>
+    <style>
+      /* Reset */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Base */
+      body {
+        font-family: "Nunito", sans-serif;
+        color: #4a5568;
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+
+      /* Background layer */
+      .background {
+        position: fixed;
+        inset: 0;
+        background: radial-gradient(
+          circle at top,
+          #ffffff 0%,
+          #eef6f8 40%,
+          #dbeef2 100%
+        );
+        z-index: -2;
+      }
+
+      /* Decorative foreground */
+      .decor {
+        position: absolute;
+        pointer-events: none;
+        opacity: 0.9;
+      }
+
+      .deer {
+        top: 130px;
+        left: calc(45vw - min(720px, 80vw) / 2);
+        width: 160px;
+      }
+
+      .tree-left {
+        bottom: 130px;
+        left: 0;
+        width: 200px;
+        z-index: -2;
+      }
+
+      .tree-right-mid {
+        bottom: 40%;
+        right: 0;
+        width: 220px;
+      }
+
+      .tree-right {
+        bottom: 0;
+        right: -20px;
+        width: 270px;
+        z-index: -2;
+      }
+
+      .bird {
+        top: 200px;
+        right: calc(45vw - min(800px, 80vw) / 2 + 12%);
+        width: 120px;
+      }
+
+      .snowman {
+        bottom: -10px;
+        right: 0;
+        width: 22vw;
+        max-width: 150px;
+      }
+
+      /* Content */
+      .content {
+        max-width: min(720px, 80vw);
+        margin: 0 auto;
+        padding: 4rem 1.5rem 6rem;
+        text-align: center;
+      }
+
+      /* Hero */
+      .hero .invite {
+        letter-spacing: 0.2em;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+      }
+
+      .hero h1 {
+        font-family: "Playfair Display", serif;
+        font-size: 3rem;
+        color: #7aa6b2;
+      }
+
+      .hero .subtitle {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+      }
+
+      .hero h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 2rem;
+        margin-top: 0.25rem;
+      }
+
+      /* Cards */
+      .card {
+        background: rgba(255, 255, 255, 0.85);
+        border-radius: 20px;
+        padding: 2rem;
+        margin: 2rem 0;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        position: relative;
+        z-index: -1;
+      }
+
+      .card h3 {
+        font-family: "Playfair Display", serif;
+        margin-bottom: 1rem;
+        color: #6b8f9c;
+      }
+
+      /* Itinerary */
+      .itinerary {
+        list-style: none;
+        text-align: left;
+        max-width: 420px;
+        margin: 0 auto;
+      }
+
+      .itinerary li {
+        display: flex;
+        gap: 1rem;
+        margin: 0.5rem 0;
+      }
+
+      .itinerary span {
+        font-weight: 600;
+        color: #7aa6b2;
+        width: 60px;
+      }
+
+      /* Wishlist */
+      .wishlist .no-gifts {
+        font-style: italic;
+        margin-bottom: 1.5rem;
+      }
+
+      .wishlist ul {
+        text-align: left;
+        max-width: 420px;
+        margin: 0.5rem auto 1rem;
+      }
+
+      .wishlist ul ul {
+        margin-left: 1.2rem;
+      }
+
+      .optional {
+        margin-top: 1rem;
+        font-weight: 600;
+      }
+
+      .thank-you {
+        font-weight: 600;
+        color: #7aa6b2;
+        width: 60%;
+        text-align: center;
+        margin: 1.5rem auto;
+      }
+
+      /* Footer */
+      footer {
+        margin-top: 3rem;
+        font-size: 0.9rem;
+        color: #718096;
+      }
+      .snow {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        background-image: radial-gradient(
+            2px 2px at 20% 30%,
+            white 50%,
+            transparent 51%
+          ),
+          radial-gradient(2px 2px at 80% 10%, white 50%, transparent 51%),
+          radial-gradient(1.5px 1.5px at 50% 50%, white 50%, transparent 51%),
+          radial-gradient(1px 1px at 30% 80%, white 50%, transparent 51%);
+        background-size: 200px 200px;
+        animation: snow-fall 18s linear infinite;
+        opacity: 0.35;
+        z-index: -1;
+      }
+
+      @keyframes snow-fall {
+        from {
+          background-position: 0 -200px;
+        }
+        to {
+          background-position: 0 600px;
+        }
+      }
+    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Nunito:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="background"></div>
+    <div class="snow"></div>
+
+    <!-- Decorative foreground elements -->
+    <img src="luna-images/deer.png" class="decor deer" alt="" />
+    <img src="luna-images/tree1.png" class="decor tree-left" alt="" />
+    <img src="luna-images/tree2.png" class="decor tree-right" alt="" />
+    <img src="luna-images/tree3.png" class="decor tree-right-mid" alt="" />
+    <img src="luna-images/bird.png" class="decor bird" alt="" />
+
+    <main class="content">
+      <section class="hero">
+        <p class="invite">Je bent uitgenodigd voor</p>
+        <h1>Luna's Winter Wonderland</h1>
+      </section>
+
+      <section class="card">
+        <h3>Waar & Wanneer</h3>
+        <p>
+          <strong>Zondag 25 januari 2026</strong><br />
+          14:30 uur - 16:30 uur
+        </p>
+        <p>
+          Kastanjelaan 57<br />
+          3768 AJ Soest
+        </p>
+      </section>
+
+      <section class="card">
+        <h3>Programma</h3>
+        <ul class="itinerary">
+          <li><span>14:30</span> Aankomst</li>
+          <li><span>15:00</span> Kinderliedjes & mini jam sessie</li>
+          <li><span>15:30</span> Taart & kaarsen ❄️</li>
+          <li><span>16:00</span> Crafty moments</li>
+          <li><span>16:30</span> Afscheidsgroeten</li>
+        </ul>
+      </section>
+
+      <section class="card wishlist">
+        <h3>Wenslijst</h3>
+
+        <p class="no-gifts">
+          Luna heeft al alles wat ze nodig heeft.
+          <br /><br />
+          We geloven dat minder speelgoed meer ruimte laat voor verbeelding,
+          creativiteit en rust — en Luna heeft al ruim genoeg speelgoed 🤍
+        </p>
+
+        <p class="optional">Als je toch iets wil meenemen, raden we aan:</p>
+
+        <ul>
+          <li>Geprinte foto's van jullie zelf voor Luna om aan te wijzen</li>
+          <li>
+            Kleding van 100% merinowol. Ze heeft nu maat 74, dus 80-86 is prima.
+          </li>
+          <ul>
+            <li>Broekjes</li>
+            <li>Truien</li>
+            <li>Sokken</li>
+          </ul>
+          <li>
+            Creatieve verbruiksartikelen:
+            <ul>
+              <li>Verf (niet giftige van maïs)</li>
+              <li>Krijtjes van bijen was</li>
+              <li>Papier & knutselspullen</li>
+            </ul>
+          </li>
+        </ul>
+
+        <p class="thank-you">Je aanwezigheid is het grootste geschenk.</p>
+        <img src="luna-images/snowman.png" class="decor snowman" alt="" />
+      </section>
+
+      <footer>
+        <p>RSVP naar Marleen · 06 - 16 07 82 75</p>
+      </footer>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<svg viewBox="0 0 900 540" xmlns="http://www.w3.org/2000/svg" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <rect x="0" y="0" width="900" height="540" fill="#ffffff"/>
+  <rect x="24" y="20" width="852" height="500" rx="14" fill="#f7f8fb" stroke="#e6e8ef"/>
+
+  <text x="48" y="56" font-size="23" font-weight="700" fill="#22223b">How tall is the average animal?</text>
+  <text x="48" y="80" font-size="13.5" fill="#6b6f80">Average each species' 95th-percentile height and you get ~2.2 m. But rank every individual animal and the</text>
+  <text x="48" y="98" font-size="13.5" fill="#6b6f80">real 95th percentile is a couple of centimetres — because nearly every animal on Earth is an insect.</text>
+
+  <!-- ===== left: taxonomy list ===== -->
+  <text x="48" y="150" font-size="12" font-weight="700" fill="#8a8f9e" letter-spacing="0.5">TAXON · POPULATION · p95 HEIGHT</text>
+
+  <!-- group: insects -->
+  <line x1="50" y1="166" x2="50" y2="238" stroke="#3b82f6" stroke-width="3"/>
+  <text x="62" y="182" font-size="14" font-weight="700" fill="#2563eb">Insects</text>
+  <text x="62" y="199" font-size="11" fill="#7b8091">≈ 99.9999% of all individuals</text>
+  <text x="62" y="220" font-size="12.5" fill="#3a3d4a">Ant · 20 quadrillion · <tspan font-weight="700">6 mm</tspan></text>
+  <text x="62" y="238" font-size="12.5" fill="#3a3d4a">Beetle · ~1 quadrillion · <tspan font-weight="700">2 cm</tspan></text>
+
+  <!-- group: large mammals -->
+  <line x1="50" y1="262" x2="50" y2="334" stroke="#e0a43b" stroke-width="3"/>
+  <text x="62" y="278" font-size="14" font-weight="700" fill="#b07d1e">Large mammals</text>
+  <text x="62" y="295" font-size="11" fill="#7b8091">a rounding error of the head-count</text>
+  <text x="62" y="316" font-size="12.5" fill="#3a3d4a">Elephant · ~500 thousand · <tspan font-weight="700">3.3 m</tspan></text>
+  <text x="62" y="334" font-size="12.5" fill="#3a3d4a">Giraffe · ~120 thousand · <tspan font-weight="700">5.5 m</tspan></text>
+
+  <text x="48" y="470" font-size="11" fill="#8a8f9e">Species = tag slice · population = request volume · height = latency.</text>
+  <text x="48" y="487" font-size="11" fill="#8a8f9e">Averaging per-slice percentiles ignores that one slice dwarfs all the rest.</text>
+
+  <!-- ===== right: log height axis ===== -->
+  <!-- axis x=610, y 120(10m) .. 470(1mm); 87.5 px/decade -->
+  <line x1="610" y1="112" x2="610" y2="470" stroke="#c8ccd8" stroke-width="1.5"/>
+  <g font-size="11" fill="#9297a6" text-anchor="end">
+    <line x1="604" y1="470"   x2="862" y2="470"   stroke="#eceef4"/><text x="600" y="474">1 mm</text>
+    <line x1="604" y1="382.5" x2="862" y2="382.5" stroke="#eceef4"/><text x="600" y="386">1 cm</text>
+    <line x1="604" y1="295"   x2="862" y2="295"   stroke="#eceef4"/><text x="600" y="299">10 cm</text>
+    <line x1="604" y1="207.5" x2="862" y2="207.5" stroke="#eceef4"/><text x="600" y="211">1 m</text>
+    <line x1="604" y1="120"   x2="862" y2="120"   stroke="#eceef4"/><text x="600" y="124">10 m</text>
+  </g>
+  <text x="628" y="108" font-size="11" fill="#9297a6">height (log scale)</text>
+
+  <!-- species dots -->
+  <g>
+    <circle cx="650" cy="401.9" r="4.5" fill="#3b82f6"/><text x="666" y="406" font-size="11.5" fill="#3a3d4a">Ant · 6 mm</text>
+    <circle cx="650" cy="356.2" r="4.5" fill="#3b82f6"/><text x="666" y="349" font-size="11.5" fill="#3a3d4a">Beetle · 2 cm</text>
+    <circle cx="650" cy="162.1" r="4.5" fill="#e0a43b"/><text x="666" y="159" font-size="11.5" fill="#3a3d4a">Elephant · 3.3 m</text>
+    <circle cx="650" cy="142.7" r="4.5" fill="#e0a43b"/><text x="666" y="135" font-size="11.5" fill="#3a3d4a">Giraffe · 5.5 m</text>
+  </g>
+
+  <!-- naive average marker (2.2 m) -->
+  <line x1="628" y1="177.5" x2="862" y2="177.5" stroke="#dc2626" stroke-width="2.2" stroke-dasharray="6 5"/>
+  <rect x="700" y="182" width="162" height="34" rx="7" fill="#fbe4e4" stroke="#dc2626"/>
+  <text x="781" y="197" font-size="11.5" font-weight="700" fill="#b91c1c" text-anchor="middle">average of the p95s</text>
+  <text x="781" y="211" font-size="11.5" fill="#b91c1c" text-anchor="middle">≈ 2.2 m — no animal here</text>
+
+  <!-- true pooled p95 marker (~2 cm) -->
+  <line x1="628" y1="356.2" x2="862" y2="356.2" stroke="#16a34a" stroke-width="2.2" stroke-dasharray="6 5"/>
+  <rect x="700" y="416" width="162" height="34" rx="7" fill="#dff3e6" stroke="#16a34a"/>
+  <text x="781" y="431" font-size="11.5" font-weight="700" fill="#15803d" text-anchor="middle">true p95 of all animals</text>
+  <text x="781" y="445" font-size="11.5" fill="#15803d" text-anchor="middle">≈ 2 cm (still an insect)</text>
+  <path d="M781,414 C 770,392 720,372 662,358" fill="none" stroke="#16a34a" stroke-width="1.2" stroke-dasharray="3 4"/>
+</svg>

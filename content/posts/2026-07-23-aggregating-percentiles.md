@@ -36,7 +36,12 @@ avg(p95_A, p95_B)  ≠  p95(A ∪ B)
 
 There's no weighting, no correction, no aggregator that recovers the true combined p95 from two precomputed p95 scalars. The information needed to compute it — the shape of the underlying distributions — is already gone by the time you have two numbers. You threw it away when you reduced each slice to a single percentile.
 
+![the p95 of two distinct populations of data being incorrectly averaged](/images/2026/07/percentile-skew.svg)
+
 Concretely: a busy backend serving 500 req/s at a healthy 80 ms p95, and an idle health-check target serving 2 req/min that occasionally records a 4-second p95, get **equal weight** in that `avg:`. Your graph shows ~2 s and you go hunting for a regression that doesn't exist. The signal you care about — the p95 your actual users experience — is buried under a slice that barely has users.
+
+Analogy from the physical world to make it clearer:
+![average of p95 of different animal kingdoms also makes no mathematical sense: p95 is inflated incorrectly](/images/2026/07/animal-height-analogy.svg)
 
 ## Why the integration makes this the default
 
@@ -53,6 +58,8 @@ I understand why the integration does it this way — pulling reduced scalars ma
 ## The bonus symptom: flaky graphs
 
 Same root cause, second face. Low-traffic slices only emit on intervals where they saw a request. So at any given rollup, the *set* of series feeding your `avg:` shifts — sparse slices blink in and out. Your line wobbles not because latency changed but because the denominator of an average you shouldn't be computing keeps changing. Interpolation and `.fill()` can paper over the gaps, but you're smoothing a number that was never meaningful.
+
+![wobbly graphs with sawtooth pattern](/images/2026/07/flaky-line.svg)
 
 ## The workarounds, and where each one breaks
 

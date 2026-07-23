@@ -1,0 +1,48 @@
+<svg viewBox="0 0 880 440" xmlns="http://www.w3.org/2000/svg" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <rect x="0" y="0" width="880" height="440" fill="#ffffff"/>
+  <rect x="24" y="20" width="832" height="400" rx="14" fill="#f7f8fb" stroke="#e6e8ef"/>
+
+  <text x="48" y="56" font-size="22" font-weight="700" fill="#22223b">Same root cause: the graph wobbles</text>
+  <text x="48" y="79" font-size="13.5" fill="#6b6f80">Sparse slices report only on intervals where they saw traffic, so the averaged line jumps for no real reason.</text>
+
+  <!-- axes -->
+  <!-- plot x 90..810, y 100..340 ; y(v)=340-(v/3000)*240 -->
+  <line x1="90" y1="340" x2="810" y2="340" stroke="#c8ccd8" stroke-width="1.5"/>
+  <line x1="90" y1="100" x2="90" y2="340" stroke="#c8ccd8" stroke-width="1.5"/>
+  <g font-size="11" fill="#9297a6" text-anchor="end">
+    <line x1="84" y1="340" x2="90" y2="340" stroke="#c8ccd8"/><text x="80" y="344">0</text>
+    <line x1="84" y1="260" x2="90" y2="260" stroke="#c8ccd8"/><text x="80" y="264">1000</text>
+    <line x1="84" y1="180" x2="90" y2="180" stroke="#c8ccd8"/><text x="80" y="184">2000</text>
+    <line x1="84" y1="100" x2="90" y2="100" stroke="#c8ccd8"/><text x="80" y="104">3000</text>
+  </g>
+  <text x="46" y="224" font-size="12" fill="#6b6f80" transform="rotate(-90 46 224)" text-anchor="middle">p95 latency (ms)</text>
+  <text x="450" y="366" font-size="12" fill="#6b6f80" text-anchor="middle">time →</text>
+
+  <!-- red: avg across all slices (spiky). points at x=110,170,...,810 (12 pts) -->
+  <!-- values ms: 250,1800,300,2600,280,1500,320,2900,260,1700,300,2400 -->
+  <polyline fill="none" stroke="#dc2626" stroke-width="2.4"
+    points="110,320 174,196 238,316 302,132 366,318 430,220 494,314 558,108 622,319 686,204 750,316 810,148"/>
+  <g fill="#dc2626">
+    <circle cx="110" cy="320" r="3"/><circle cx="174" cy="196" r="3"/><circle cx="238" cy="316" r="3"/>
+    <circle cx="302" cy="132" r="3"/><circle cx="366" cy="318" r="3"/><circle cx="430" cy="220" r="3"/>
+    <circle cx="494" cy="314" r="3"/><circle cx="558" cy="108" r="3"/><circle cx="622" cy="319" r="3"/>
+    <circle cx="686" cy="204" r="3"/><circle cx="750" cy="316" r="3"/><circle cx="810" cy="148" r="3"/>
+  </g>
+
+  <!-- green: stable per-backend max p95 (~90-120ms), hugs bottom -->
+  <polyline fill="none" stroke="#16a34a" stroke-width="2.4"
+    points="110,332 174,329 238,333 302,330 366,328 430,331 494,330 558,332 622,329 686,331 750,333 810,330"/>
+
+  <!-- annotation to a spike -->
+  <path d="M558,108 q 46,-6 76,10" fill="none" stroke="#8a8f9e" stroke-width="1.2" stroke-dasharray="3 4"/>
+  <text x="612" y="128" font-size="11" fill="#5b6270">one idle slice emits a slow sample →</text>
+  <text x="612" y="143" font-size="11" fill="#5b6270">the whole average leaps to ~2.9 s</text>
+
+  <!-- legend -->
+  <g font-size="12.5">
+    <rect x="120" y="392" width="18" height="4" rx="2" fill="#dc2626"/>
+    <text x="146" y="397" fill="#3a3d4a">avg: p95 across all slices — flaky</text>
+    <rect x="470" y="392" width="18" height="4" rx="2" fill="#16a34a"/>
+    <text x="496" y="397" fill="#3a3d4a">max: p95 on 2xx, per backend — stable</text>
+  </g>
+</svg>

@@ -1,0 +1,51 @@
+<svg viewBox="0 0 880 490" xmlns="http://www.w3.org/2000/svg" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <rect x="0" y="0" width="880" height="490" fill="#ffffff"/>
+  <rect x="24" y="20" width="832" height="450" rx="14" fill="#f7f8fb" stroke="#e6e8ef"/>
+
+  <text x="48" y="58" font-size="24" font-weight="700" fill="#22223b">You can't average percentiles</text>
+  <text x="48" y="82" font-size="14" fill="#6b6f80">avg(p95₁, p95₂) is not the p95 of the combined traffic — it points at latency almost nobody saw.</text>
+
+  <!-- plot baseline -->
+  <line x1="80" y1="380" x2="800" y2="380" stroke="#c8ccd8" stroke-width="1.5"/>
+
+  <!-- axis ticks: x(v) = 80 + (v/4500)*720 -->
+  <g font-size="11" fill="#9297a6" text-anchor="middle">
+    <line x1="80"  y1="380" x2="80"  y2="386" stroke="#c8ccd8"/><text x="80"  y="401">0</text>
+    <line x1="240" y1="380" x2="240" y2="386" stroke="#c8ccd8"/><text x="240" y="401">1000</text>
+    <line x1="400" y1="380" x2="400" y2="386" stroke="#c8ccd8"/><text x="400" y="401">2000</text>
+    <line x1="560" y1="380" x2="560" y2="386" stroke="#c8ccd8"/><text x="560" y="401">3000</text>
+    <line x1="720" y1="380" x2="720" y2="386" stroke="#c8ccd8"/><text x="720" y="401">4000</text>
+    <text x="440" y="420" fill="#6b6f80" font-size="12">request latency (ms)</text>
+  </g>
+
+  <!-- Backend A: big traffic, tight distribution near left -->
+  <path d="M80,380 C 86,380 88,132 98,132 C 108,132 110,380 124,380 Z" fill="#3b82f6" fill-opacity="0.85"/>
+  <!-- Backend B: idle health-check, low broad smear with long tail -->
+  <path d="M224,380 C 300,380 342,296 388,296 C 480,296 626,360 752,379 L752,380 Z" fill="#e0a43b" fill-opacity="0.75"/>
+
+  <!-- true pooled p95 marker ~85ms -> x≈94 -->
+  <line x1="94" y1="118" x2="94" y2="380" stroke="#16a34a" stroke-width="2.5"/>
+  <circle cx="94" cy="118" r="4" fill="#16a34a"/>
+  <text x="112" y="112" font-size="13" font-weight="700" fill="#15803d">True pooled p95 ≈ 85 ms</text>
+  <text x="112" y="129" font-size="11" fill="#4b8a5f">pool every request, then take p95</text>
+
+  <!-- naive average marker 2040ms -> x≈406 -->
+  <line x1="406" y1="150" x2="406" y2="380" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="6 5"/>
+  <circle cx="406" cy="150" r="4" fill="#dc2626"/>
+  <text x="406" y="142" font-size="13" font-weight="700" fill="#dc2626" text-anchor="middle">avg(p95₁, p95₂) = 2040 ms</text>
+
+  <!-- empty-space callout -->
+  <path d="M406,300 q 20,26 46,30" fill="none" stroke="#dc2626" stroke-width="1.4" stroke-dasharray="3 4"/>
+  <text x="460" y="336" font-size="11.5" fill="#b91c1c">no real request was this slow —</text>
+  <text x="460" y="352" font-size="11.5" fill="#b91c1c">the average sits in empty space</text>
+
+  <!-- backend labels -->
+  <text x="130" y="180" font-size="12" font-weight="700" fill="#2563eb">Backend A</text>
+  <text x="130" y="196" font-size="11" fill="#5b6270">500 req/s · p95 = 80 ms</text>
+
+  <text x="500" y="248" font-size="12" font-weight="700" fill="#b07d1e">Health-check target</text>
+  <text x="500" y="264" font-size="11" fill="#5b6270">2 req/min · p95 = 4000 ms</text>
+
+  <!-- footer equation -->
+  <text x="48" y="452" font-size="13" fill="#3a3d4a">A carries ~99.9% of the traffic, so the combined p95 barely moves — yet the naive average weights both slices <tspan font-weight="700">equally</tspan>.</text>
+</svg>

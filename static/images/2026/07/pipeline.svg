@@ -1,0 +1,63 @@
+<svg viewBox="0 0 920 440" xmlns="http://www.w3.org/2000/svg" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <marker id="arrGray" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#9297a6"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="920" height="440" fill="#ffffff"/>
+
+  <text x="40" y="42" font-size="22" font-weight="700" fill="#22223b">Where it breaks — and how to keep it correct</text>
+
+  <!-- ===== Problem row ===== -->
+  <rect x="24" y="66" width="872" height="150" rx="14" fill="#fdf3f3" stroke="#f2c9c9"/>
+  <text x="44" y="92" font-size="13" font-weight="700" fill="#b91c1c">TODAY · the default path</text>
+
+  <!-- box 1 -->
+  <rect x="44" y="108" width="200" height="80" rx="10" fill="#ffffff" stroke="#e6b3b3"/>
+  <text x="144" y="138" font-size="13" font-weight="700" fill="#3a3d4a" text-anchor="middle">GCP Cloud Monitoring</text>
+  <text x="144" y="158" font-size="11.5" fill="#6b6f80" text-anchor="middle">latency = distribution</text>
+  <text x="144" y="174" font-size="11.5" fill="#6b6f80" text-anchor="middle">(histogram buckets)</text>
+
+  <line x1="244" y1="148" x2="320" y2="148" stroke="#9297a6" stroke-width="1.6" marker-end="url(#arrGray)"/>
+  <text x="282" y="136" font-size="10.5" fill="#8a1f1f" text-anchor="middle">keeps only</text>
+  <text x="282" y="149" font-size="10.5" fill="#8a1f1f" text-anchor="middle">reduced scalars</text>
+
+  <!-- box 2 -->
+  <rect x="326" y="108" width="212" height="80" rx="10" fill="#ffffff" stroke="#e6b3b3"/>
+  <text x="432" y="138" font-size="13" font-weight="700" fill="#3a3d4a" text-anchor="middle">Datadog</text>
+  <text x="432" y="158" font-size="11.5" fill="#6b6f80" text-anchor="middle">p95 gauge per tag combo</text>
+  <text x="432" y="174" font-size="11.5" fill="#6b6f80" text-anchor="middle">(×100+ separate series)</text>
+
+  <line x1="538" y1="148" x2="614" y2="148" stroke="#9297a6" stroke-width="1.6" marker-end="url(#arrGray)"/>
+
+  <!-- result -->
+  <rect x="620" y="108" width="256" height="80" rx="10" fill="#fbe4e4" stroke="#dc2626"/>
+  <text x="748" y="140" font-size="13.5" font-weight="700" fill="#b91c1c" text-anchor="middle">avg: across gauges</text>
+  <text x="748" y="162" font-size="12" fill="#b91c1c" text-anchor="middle">reaggregating percentiles ✗</text>
+  <text x="748" y="179" font-size="11" fill="#c05252" text-anchor="middle">the raw shape is already gone</text>
+
+  <!-- ===== Fix row ===== -->
+  <rect x="24" y="240" width="872" height="150" rx="14" fill="#f1faf4" stroke="#c3e8d0"/>
+  <text x="44" y="266" font-size="13" font-weight="700" fill="#15803d">THE FIX · keep it a distribution</text>
+
+  <rect x="44" y="282" width="200" height="80" rx="10" fill="#ffffff" stroke="#bfe4cc"/>
+  <text x="144" y="312" font-size="13" font-weight="700" fill="#3a3d4a" text-anchor="middle">Same buckets</text>
+  <text x="144" y="332" font-size="11.5" fill="#6b6f80" text-anchor="middle">distribution / histogram</text>
+  <text x="144" y="348" font-size="11.5" fill="#6b6f80" text-anchor="middle">from GCP or the app</text>
+
+  <line x1="244" y1="322" x2="320" y2="322" stroke="#9297a6" stroke-width="1.6" marker-end="url(#arrGray)"/>
+  <text x="282" y="310" font-size="10.5" fill="#1f7a44" text-anchor="middle">OTLP histogram /</text>
+  <text x="282" y="323" font-size="10.5" fill="#1f7a44" text-anchor="middle">app distribution</text>
+
+  <rect x="326" y="282" width="212" height="80" rx="10" fill="#ffffff" stroke="#bfe4cc"/>
+  <text x="432" y="312" font-size="13" font-weight="700" fill="#3a3d4a" text-anchor="middle">Datadog distribution</text>
+  <text x="432" y="332" font-size="11.5" fill="#6b6f80" text-anchor="middle">DDSketch keeps the</text>
+  <text x="432" y="348" font-size="11.5" fill="#6b6f80" text-anchor="middle">raw shape server-side</text>
+
+  <line x1="538" y1="322" x2="614" y2="322" stroke="#9297a6" stroke-width="1.6" marker-end="url(#arrGray)"/>
+
+  <rect x="620" y="282" width="256" height="80" rx="10" fill="#dff3e6" stroke="#16a34a"/>
+  <text x="748" y="314" font-size="13.5" font-weight="700" fill="#15803d" text-anchor="middle">avg:…p95 merges sketches</text>
+  <text x="748" y="336" font-size="12" fill="#15803d" text-anchor="middle">one correct global p95 ✓</text>
+  <text x="748" y="353" font-size="11" fill="#3f8f5c" text-anchor="middle">valid across any tags</text>
+</svg>

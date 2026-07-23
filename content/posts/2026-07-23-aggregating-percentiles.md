@@ -1,9 +1,9 @@
 ---
-title: aggregating-percentiles
+title: stop-aggregating-percentiles
 author: hbanken
 type: post
 date: 2026-07-23T14:33:00+02:00
-url: /2026/07/23/aggregating-percentiles/
+url: /2026/07/23/stop-aggregating-percentiles/
 categories:
   - datadog
   - googlecloud

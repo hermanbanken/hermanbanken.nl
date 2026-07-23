@@ -8,7 +8,7 @@ categories:
   - datadog
   - googlecloud
   - observability
-  - matsh
+  - math
 
 ---
 

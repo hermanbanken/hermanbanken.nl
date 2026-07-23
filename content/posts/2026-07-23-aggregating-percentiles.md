@@ -12,6 +12,8 @@ categories:
 
 ---
 
+I've come across this issue professionally more than a few times now, and decided to write it down. A lot of latency graphs are unusable. Observability is hard, and talking about performance is even harder. But it is made a lot harder than needed by the platforms built for this, than it should. This article is for everyone creating dashboards, especially when you use DataDog & GCP together.
+
 # Stop averaging your GCP percentiles in Datadog
 
 If you pull Google Cloud metrics into Datadog, there's a good chance one of your latency graphs is lying to you. Here's the query almost everyone writes:

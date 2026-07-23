@@ -1,5 +1,5 @@
 ---
-title: stop-aggregating-percentiles
+title: Stop averaging your GCP percentiles in Datadog
 author: hbanken
 type: post
 date: 2026-07-23T14:33:00+02:00
